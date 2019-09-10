@@ -16,6 +16,12 @@ import debug from '../Debug/index.js'
 import Socket from '../Socket/index.js'
 import JsonEncoder from '../JsonEncoder/index.js'
 
+var window = window || {}
+window.WebSocket = WebSocket
+window.location = {}
+window.location.protocol = 'http'
+window.location.host = ''
+
 /**
  * Returns the ws protocol based upon HTTP or HTTPS
  *
